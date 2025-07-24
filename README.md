@@ -209,9 +209,47 @@ In the same barber shop, the barber finishes each customer's haircut **completel
 - Average waiting time = (0 + 10 + 15) / 3 = 8.33.
 
 **Q16: Explain Shortest Job First (SJF) scheduling and its advantages.**  
-**A:** SJF schedules the process with the shortest burst time first (can be preemptive or non-preemptive).  
-**Advantages**: Minimizes average waiting time; optimal for non-preemptive scheduling.  
-**Disadvantage**: Requires burst time prediction, may cause starvation for long jobs.
+**A:** ### ✅ **SJF – Shortest Job First Scheduling**
+
+**Shortest Job First (SJF)** is a CPU scheduling algorithm where the process with the **shortest CPU burst time** (i.e., execution time) is selected next for execution.
+
+---
+
+### 📌 Types of SJF:
+
+| Type                      | Description                                                                                          |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Non-preemptive SJF**    | Once a process starts, it runs to completion. No interruptions.                                      |
+| **Preemptive SJF** (SRTF) | Also called **Shortest Remaining Time First** – process can be interrupted if a shorter job arrives. |
+
+📊 Example (Non-Preemptive SJF)
+
+| Process | Arrival Time | Burst Time |
+| ------- | ------------ | ---------- |
+| P1      | 0 ms         | 7 ms       |
+| P2      | 2 ms         | 4 ms       |
+| P3      | 4 ms         | 1 ms       |
+| P4      | 5 ms         | 4 ms       |
+
+
+
+📉 Advantages:
+
+* **Minimum average waiting time** (if burst times are known).
+* Optimal in theoretical scenarios.
+
+
+📈 Disadvantages:
+
+* **Difficult to predict burst time** in real systems.
+* May lead to **starvation** for longer processes if short jobs keep arriving.
+* Not always suitable for **interactive systems**.
+
+
+---
+
+Let me know if you want a **comparison of SJF vs FCFS** or want to see a **preemptive SJF (SRTF) example**!
+
 
 **Q17: What is Shortest Remaining Time First (SRTF)?**  
 **A:** SRTF is preemptive SJF, where the process with the shortest remaining time is scheduled whenever a new process arrives or completes.  
