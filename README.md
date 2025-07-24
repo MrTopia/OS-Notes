@@ -74,9 +74,62 @@
 - **Response Time**: Time from submission to first response.
 
 **Q13: Differentiate between preemptive and non-preemptive scheduling.**  
-**A:**  
-- **Preemptive**: The OS can interrupt a running process to allocate CPU to another (e.g., Round Robin).  
-- **Non-Preemptive**: A process runs to completion or voluntarily releases the CPU (e.g., FCFS).
+**A:** 
+
+### 🔄 **1. Preemptive Scheduling**
+
+> **Definition**: In preemptive scheduling, the CPU **can be taken away** from a running process **before it finishes**, usually when a higher-priority process arrives or a time slice expires.
+
+#### ✅ Characteristics:
+
+* The OS forcibly **interrupts** a process to switch to another.
+* Used in **real-time** and **multitasking systems**.
+* Requires **context switching**.
+
+#### 💡 Example Algorithms:
+
+* **Round Robin (RR)**
+* **Shortest Remaining Time First (SRTF)**
+* **Priority Scheduling (preemptive version)**
+* **Multilevel Queue Scheduling**
+
+#### 📌 Real-Life Analogy:
+
+Imagine you're at a barber shop. You’re halfway through your haircut, but a VIP customer walks in. The barber **stops your haircut** and starts serving the VIP. That’s preemption.
+
+---
+
+### ⏸️ **2. Non-Preemptive Scheduling**
+
+> **Definition**: In non-preemptive scheduling, once a process starts executing, **it runs to completion** or until it enters the waiting state (like I/O), **without interruption**.
+
+#### ✅ Characteristics:
+
+* The CPU is **not taken away** from a running process.
+* Simpler to implement.
+* No forced context switching.
+
+#### 💡 Example Algorithms:
+
+* **First-Come, First-Served (FCFS)**
+* **Shortest Job First (SJF - non-preemptive version)**
+* **Priority Scheduling (non-preemptive)**
+
+#### 📌 Real-Life Analogy:
+
+In the same barber shop, the barber finishes each customer's haircut **completely** before moving to the next, even if someone more important arrives.
+
+---
+
+### 🆚 Preemptive vs Non-Preemptive: Quick Comparison
+
+| Feature            | Preemptive Scheduling             | Non-Preemptive Scheduling |
+| ------------------ | --------------------------------- | ------------------------- |
+| Can be interrupted | ✅ Yes                             | ❌ No                      |
+| Response time      | Better for short tasks            | May be worse              |
+| Starvation risk    | Higher                            | Lower                     |
+| Complexity         | Higher (due to context switching) | Lower                     |
+| CPU utilization    | Generally better                  | May be worse              |
 
 **Q14: Explain long-term, short-term, and medium-term scheduling.**  
 **A:**  
