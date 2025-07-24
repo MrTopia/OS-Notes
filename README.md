@@ -246,13 +246,14 @@ In the same barber shop, the barber finishes each customer's haircut **completel
 * Not always suitable for **interactive systems**.
 
 
----
-
-Let me know if you want a **comparison of SJF vs FCFS** or want to see a **preemptive SJF (SRTF) example**!
 
 
 **Q17: What is Shortest Remaining Time First (SRTF)?**  
-**A:** SRTF is preemptive SJF, where the process with the shortest remaining time is scheduled whenever a new process arrives or completes.  
+**A:** In SRTF, the CPU is assigned to the process with the shortest remaining burst time.
+If a new process arrives with a shorter remaining time than the currently running process, the CPU is preempted and given to the new process.
+
+
+
 **Example**: P1 (burst: 8, arrival: 0), P2 (4, 1), P3 (9, 2).  
 - Schedule: P1 (0-1), P2 (1-5), P1 (5-12), P3 (12-21).  
 - Avg. waiting time = (0 + 0 + 10) / 3 = 3.33.
