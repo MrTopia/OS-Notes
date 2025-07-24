@@ -67,11 +67,75 @@
 
 **Q12: List and explain scheduling criteria.**  
 **A:**  
-- **CPU Utilization**: Maximize CPU usage.  
-- **Throughput**: Number of processes completed per unit time.  
-- **Turnaround Time**: Total time from submission to completion.  
-- **Waiting Time**: Time spent in the ready queue.  
-- **Response Time**: Time from submission to first response.
+
+
+---
+
+## ✅ **1. CPU Utilization**
+
+* **Definition**: The percentage of time the CPU is busy doing useful work.
+* **Goal**: Maximize CPU utilization (ideally close to 100%).
+* **Why it matters**: Higher utilization means fewer CPU cycles are wasted.
+
+---
+
+## ✅ **2. Throughput**
+
+* **Definition**: The number of processes completed per unit of time.
+* **Goal**: Maximize throughput.
+* **Example**: If 5 processes finish in 2 seconds, throughput = 2.5 processes/second.
+* **Why it matters**: More throughput means better overall system performance.
+
+---
+
+## ✅ **3. Turnaround Time**
+
+* **Definition**: The total time taken from process **submission** to **completion**.
+* **Formula**:
+  `Turnaround Time = Completion Time - Arrival Time`
+* **Goal**: Minimize turnaround time.
+* **Why it matters**: Important for batch systems and user satisfaction.
+
+---
+
+## ✅ **4. Waiting Time**
+
+* **Definition**: The total time a process spends in the **ready queue**, waiting to get the CPU.
+* **Formula**:
+  `Waiting Time = Turnaround Time - Burst Time`
+* **Goal**: Minimize waiting time.
+* **Why it matters**: Reduces idle process time, improving responsiveness.
+
+---
+
+## ✅ **5. Response Time**
+
+* **Definition**: The time from process submission to **first response** (i.e., when it starts executing).
+* **Formula**:
+  `Response Time = First CPU Allocation Time - Arrival Time`
+* **Goal**: Minimize response time.
+* **Why it matters**: Crucial in **interactive systems** like GUIs and real-time applications.
+
+---
+
+## ✅ **6. Fairness**
+
+* **Definition**: Every process should get a **fair share** of CPU time and should not suffer from **starvation**.
+* **Goal**: Prevent indefinite postponement of low-priority or long processes.
+* **Why it matters**: Ensures that all processes are treated fairly, especially in shared systems.
+
+---
+
+### 🔁 Summary Table
+
+| **Criteria**    | **Goal**        | **Importance**                                  |
+| --------------- | --------------- | ----------------------------------------------- |
+| CPU Utilization | Maximize        | Keep CPU busy                                   |
+| Throughput      | Maximize        | Complete more jobs in less time                 |
+| Turnaround Time | Minimize        | Faster process completion                       |
+| Waiting Time    | Minimize        | Reduce time in ready queue                      |
+| Response Time   | Minimize        | Improve interactivity                           |
+| Fairness        | Ensure equality | Avoid starvation and ensure balanced scheduling |
 
 **Q13: Differentiate between preemptive and non-preemptive scheduling.**  
 **A:** 
