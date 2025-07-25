@@ -282,13 +282,19 @@ If a new process arrives with a shorter remaining time than the currently runnin
 **A:** Concurrent processes execute simultaneously, sharing resources. Synchronization prevents race conditions and ensures data consistency (e.g., updating shared variables).
 
 **Q23: Define the critical section and its requirements.**  
-**A:** A critical section is a code segment accessing shared resources. Requirements:  
+**A:** A Critical Section is a part of a program (usually in a multithreaded or multiprocess environment) where the shared resources (like variables, files, memory, etc.) are accessed and modified.
+
+Since multiple threads/processes may try to access these resources simultaneously, we need to make sure that only one thread/process can enter the critical section at a time. Otherwise, it could lead to data inconsistency, corruption, or race conditions.
+
+Requirements:  
 - **Mutual Exclusion**: Only one process can execute in the critical section at a time.  
 - **Progress**: Non-critical section processes cannot block others.  
 - **Bounded Waiting**: Limited waiting time for processes.
 
 **Q24: What are semaphores, and how are they used?**  
 **A:** Semaphores are synchronization tools (integer variables) with `wait()` (decrement) and `signal()` (increment) operations.  
+A semaphore is a variable (or abstract data type) used to control access to a common resource in a concurrent system such as a multitasking operating system.
+
 - **Binary Semaphore**: 0 or 1 for mutual exclusion.  
 - **Counting Semaphore**: Manages multiple resource instances.  
 **Example**: Producer-consumer problem uses semaphores to control buffer access.
