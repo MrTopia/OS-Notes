@@ -295,9 +295,11 @@ Requirements:
 **A:** Semaphores are synchronization tools (integer variables) with `wait()` (decrement) and `signal()` (increment) operations.  
 A semaphore is a variable (or abstract data type) used to control access to a common resource in a concurrent system such as a multitasking operating system.
 
-- **Binary Semaphore**: 0 or 1 for mutual exclusion.  
-- **Counting Semaphore**: Manages multiple resource instances.  
-**Example**: Producer-consumer problem uses semaphores to control buffer access.
+- **Counting Semaphore**: Can take non-negative integer values. Used to control access to a resource pool with multiple instances (e.g., limited number of printers).
+Example: Value of 3 → 3 resources available.
+- **Binary Semaphore**: Takes only values 0 or 1.
+Acts like a lock (also called mutex).
+Used when there is only one shared resource.
 
 **Q25: List methods for inter-process communication (IPC).**  
 **A:**  
